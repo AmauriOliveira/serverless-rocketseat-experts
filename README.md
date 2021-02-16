@@ -34,6 +34,11 @@ E caso queira ver os logs das Lambdas, vá até o detalhe de uma delas e na aba 
 
 ## Rodando localmente
 
+```bash
+# exemplo para rodar localmente com log e passando parametros
+sls invoke local -f getArticles -l --data '{"pathParameters":{"id":"uuid"}}'
+```
+
 Durante o workshop, sempre que fazíamos uma modificação, fazíamos o deploy para testar. Em aplicações reais isso se torna inviável, portanto, para conseguir testar com mais facilidade, sugiro o estudo de duas ferramentas:
 
 - [Serverless Offline Plugin](https://www.serverless.com/plugins/serverless-offline) - emula lambdas e API Gateway na sua máquina, subindo um servidor para gerenciar as requisições.
